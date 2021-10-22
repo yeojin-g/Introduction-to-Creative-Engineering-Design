@@ -20,11 +20,11 @@ void loop() {
     Serial.println(count);
     digitalWrite(PIN_LED, toggle);
     delay(100);
-    toggle = ++toggle;
-    count = 1 + count;
+    count = ++count;
   }
 }
 
 int toggle_state(int toggle) {
-  return toggle%2;
+  toggle = count%2;
+  return toggle;
 }
